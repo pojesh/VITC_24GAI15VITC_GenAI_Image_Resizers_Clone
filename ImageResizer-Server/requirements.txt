@@ -1,0 +1,26 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch==2.7.0+cu126
+torchvision
+torchaudio
+
+# RealESRGAN dependencies
+basicsr>=1.4.2
+facexlib>=0.2.5
+gfpgan>=1.3.5
+
+fastapi==0.115.12
+uvicorn==0.34.2
+numpy==2.2.3
+opencv-python==4.11.0.86
+
+Pillow==10.4.0
+requests==2.32.3
+python-multipart==0.0.20
+
+# SDXL dependencies
+
+transformers
+accelerate
+diffusers
+huggingface-hub
+tqdm

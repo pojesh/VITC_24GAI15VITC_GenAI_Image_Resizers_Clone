@@ -1,0 +1,18 @@
+// RUN BACKEND 
+cd ImageResizer-Server
+pip install -r requirements.txt
+
+In Windows-
+execute the "run_server.bat" file
+(or)
+python -m uvicorn main:app --reload --host localhost --port 8000
+
+In Linux-
+python -m uvicorn main:app --reload --host localhost --port 8000
+
+
+// RUN FRONTEND
+cd ImageResizer-Webapp
+
+npm run build
+npm start

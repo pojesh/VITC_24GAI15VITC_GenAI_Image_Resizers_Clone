@@ -1,0 +1,37 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+venv/
+.env
+
+# Local files
+.vscode/
+*.local
+*.log
+.trae/
+
+# Build artifacts
+build/
+dist/
+*.egg
+*.whl
+
+# Outputs
+results/
+uploads/
+outputs/
+
+# Models
+Real-ESRGAN-master/weights/
