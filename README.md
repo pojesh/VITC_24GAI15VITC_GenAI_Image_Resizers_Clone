@@ -37,7 +37,7 @@ The repository is organized as follows:
 
 This the architecture of the system.
 
-![Project Architecture Diagram](documents/pipeline_flowchart_whitebg.png)
+![Project Architecture Diagram](documents/pipeline_flowchart_wide.png)
 
 ---
 
@@ -115,6 +115,13 @@ Once the setup is complete, you can start the backend server.
 
 Run the application using docker.
 * Windows requires WSL2 and Nvidia-Container-Toolkit installed to run the container.
+* `.wslconfig` in User directory needs to be modified for more resource allocation.
+    ```bash
+    [wsl2]
+    memory=8GB  
+    processors=10 
+    swap=6GB    
+    ```
 
 1.  **In the repository root directory:**
     ```bash
@@ -159,9 +166,9 @@ The frontend provides an intuitive interface for users to:
 
 Here is a comparison of an original image with its 2x and 4x upscaled versions.
 
-| Original (352x352)                                                                      | 2x Upscaled (704x704)                                                                  | 4x Upscaled (1408x1408)                                                                    |
+| Original (734x413)                                                                      | 2x Upscaled (1468x826)                                                                  | 4x Upscaled (2936x1652)                                                                    |
 | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
-| ![Original Image](upscale-results/robotmeditate_352x352.webp) | ![2x Upscaled Image](upscale-results/robotmeditate_704x704.jpg) | ![4x Upscaled Image](upscale-results/robotmeditate_1408x1408.jpg) |
+| ![Original Image](upscale-results/drone_original.jpg) | ![2x Upscaled Image](upscale-results/drone_2x.jpg) | ![4x Upscaled Image](upscale-results/drone_4x.jpg) |
 
 ### Outpainting Results
 
