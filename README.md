@@ -37,7 +37,7 @@ The repository is organized as follows:
 
 This the architecture of the system.
 
-![Project Architecture Diagram](documents/pipeline_flowchart_wide.png)
+![Project Architecture Diagram](documents/flowchart/pipeline_flowchart_wide_L.png)
 
 ---
 
