@@ -21,10 +21,12 @@ The repository is organized as follows:
 │   └── ... (Next.js components and pages)
 ├── documents/
 │   ├── monthly connect ppts/
-│   ├── pipeline_flowchart_wide.png
+│   ├── flowchart/flowchart.png
 │   └── 24GAI15VITC_Demonstration.mov
 ├── flux-images-outpaint-results/
 │   └── ... (Sample input and sdxl outpainted images)
+├── upscale-results/
+│   └── ... (Sample input and upscaled images)
 ├── run-notes.txt
 ├── sdxl-output.ipynb
 ├── docker-compose.yml
@@ -74,18 +76,13 @@ To get the project running locally, follow these steps:
     cd VITC_24GAI15VITC_GenAI_Image_Resizers
     ```
 
-2.  **Create a virtual environment and activate it:**
+2.  **Install dependencies for backend:**
     ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3.  **Install dependencies:**
-    ```bash
+    cd ImageResizer-Server
     pip install -r requirements.txt
     ```
 
-4.  **Download Model Weights:**
+3.  **Download Model Weights:**
     The Real-ESRGAN model weights already exist in 
     ```bash
     ImageResizer-Server\
@@ -106,9 +103,19 @@ Once the setup is complete, you can start the backend server.
 
 1.  **Start the FastAPI server:**
     ```bash
-    cd ImageResizer-Webapp
+    cd ImageResizer-Server
     python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
     ```
+
+2.  **Start the Next.js server:**
+    ```bash
+    cd ImageResizer-Webapp
+    npm install
+    npm run dev
+    ```
+
+Note: 
+* Restart the backend if cuda out-of-memory error occurs.
 ---
 
 ## 🐳 Docker
@@ -120,7 +127,7 @@ Run the application using docker.
     [wsl2]
     memory=8GB  
     processors=10 
-    swap=6GB    
+    swap=8GB    
     ```
 
 1.  **In the repository root directory:**
