@@ -1,4 +1,4 @@
-# VITC_24GAI15VITC_GenAI_Image_Resizers
+# Image Enhancer - Samsung Prism
 
 This project provides a powerful service for advanced image manipulation, featuring two core functionalities: high-fidelity image upscaling using **Real-ESRGAN** and intelligent image outpainting with a **Stable Diffusion XL (SDXL) pipeline**.
 
